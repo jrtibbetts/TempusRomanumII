@@ -3,19 +3,19 @@
 import SwiftUI
 
 struct ClockView : View {
-    
-    @State var showMilitaryTime = false
+
+    @State private var showMilitaryTime = false
     
     private var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.timeStyle = .short
+        formatter.dateFormat = "hh:mm a"
         
         return formatter
     }()
     
     private var militaryDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "HH:MM"
+        formatter.dateFormat = "HHmm"
         
         return formatter
     }()
@@ -30,17 +30,18 @@ struct ClockView : View {
     
     var body: some View {
         VStack {
-            Button(action: {
-                self.showMilitaryTime.toggle()
-            }) {
-                Text(self.timeString)
-                    .font(.headline)
-            }
-//
-//            Text("quinta hora noctis")
-//                .font(.subheadline)
-//                .italic()
-//                .padding(.top, 10)
+            Button(action: { self.showMilitaryTime.toggle() },
+                   label: {
+                    Text(self.timeString)
+                        .frame(minWidth: 100)
+                        .font(.headline)
+                    }
+            )
+
+            Text("quinta hora noctis")
+                .font(.subheadline)
+                .italic()
+                .padding(.top, 10)
         }
     }
     
