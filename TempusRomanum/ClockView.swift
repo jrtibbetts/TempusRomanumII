@@ -6,19 +6,41 @@ struct ClockView : View {
     
     @State var showMilitaryTime = false
     
+    private var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        
+        return formatter
+    }()
+    
+    private var militaryDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:MM"
+        
+        return formatter
+    }()
+    
+    private var timeString: String {
+        if showMilitaryTime {
+            return militaryDateFormatter.string(from: Date())
+        } else {
+            return dateFormatter.string(from: Date())
+        }
+    }
+    
     var body: some View {
         VStack {
             Button(action: {
                 self.showMilitaryTime.toggle()
             }) {
-                Text("11:31 PM")
+                Text(self.timeString)
                     .font(.headline)
             }
-            
-            Text("quinta hora noctis")
-                .font(.subheadline)
-                .italic()
-                .padding(.top, 10)
+//
+//            Text("quinta hora noctis")
+//                .font(.subheadline)
+//                .italic()
+//                .padding(.top, 10)
         }
     }
     
