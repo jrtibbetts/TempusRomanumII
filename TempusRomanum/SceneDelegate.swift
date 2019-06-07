@@ -1,10 +1,4 @@
-//
-//  SceneDelegate.swift
-//  TempusRomanum
-//
-//  Created by Jason R Tibbetts on 6/6/19.
 //  Copyright © 2019 Poikile Creations. All rights reserved.
-//
 
 import UIKit
 import SwiftUI
@@ -21,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UIHostingController(rootView: ContentView())
+        window.rootViewController = UIHostingController(rootView: Home())
         self.window = window
         window.makeKeyAndVisible()
     }
