@@ -13,4 +13,27 @@ final class RomanTime: BindableObject {
         }
     }
     
+    private var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm a"
+        
+        return formatter
+    }()
+    
+    private var militaryDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HHmm"
+        
+        return formatter
+    }()
+    
+    // The
+    var timeString: String {
+        if useMilitaryTime {
+            return militaryDateFormatter.string(from: Date())
+        } else {
+            return dateFormatter.string(from: Date())
+        }
+    }
+
 }

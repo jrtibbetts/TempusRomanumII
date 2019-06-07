@@ -6,33 +6,11 @@ struct ClockView : View {
 
     @EnvironmentObject private var romanTime: RomanTime
     
-    private var dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm a"
-        
-        return formatter
-    }()
-    
-    private var militaryDateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HHmm"
-        
-        return formatter
-    }()
-    
-    private var timeString: String {
-        if romanTime.useMilitaryTime {
-            return militaryDateFormatter.string(from: Date())
-        } else {
-            return dateFormatter.string(from: Date())
-        }
-    }
-    
     var body: some View {
         VStack {
             Button(action: { self.romanTime.useMilitaryTime.toggle() },
                    label: {
-                    Text(self.timeString)
+                    Text(self.romanTime.timeString)
                         .frame(minWidth: 100)
                         .font(.headline)
                     }
