@@ -4,7 +4,7 @@ import SwiftUI
 
 struct ClockView : View {
 
-    @State private var showMilitaryTime = false
+    @EnvironmentObject private var romanTime: RomanTime
     
     private var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -21,7 +21,7 @@ struct ClockView : View {
     }()
     
     private var timeString: String {
-        if showMilitaryTime {
+        if romanTime.useMilitaryTime {
             return militaryDateFormatter.string(from: Date())
         } else {
             return dateFormatter.string(from: Date())
@@ -30,7 +30,7 @@ struct ClockView : View {
     
     var body: some View {
         VStack {
-            Button(action: { self.showMilitaryTime.toggle() },
+            Button(action: { self.romanTime.useMilitaryTime.toggle() },
                    label: {
                     Text(self.timeString)
                         .frame(minWidth: 100)
@@ -51,6 +51,7 @@ struct ClockView : View {
 struct Clock_Previews : PreviewProvider {
     static var previews: some View {
         ClockView()
+            .environmentObject(RomanTime())
     }
 }
 #endif
