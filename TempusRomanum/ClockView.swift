@@ -10,9 +10,15 @@ struct ClockView : View {
         VStack {
             Button(action: {
                 self.showMilitaryTime.toggle()
-            }, label: { Text("11:31 PM")})
+            }) {
+                Text("11:31 PM")
+                    .font(.headline)
+            }
             
-            Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+            Text("quinta hora noctis")
+                .font(.subheadline)
+                .italic()
+                .padding(.top, 10)
         }
     }
     
