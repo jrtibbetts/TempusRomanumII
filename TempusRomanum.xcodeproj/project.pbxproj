@@ -14,7 +14,7 @@
 		96A09A4B22AA0F3D00FE6BC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A09A4922AA0F3D00FE6BC6 /* LaunchScreen.storyboard */; };
 		96A09A6F22AA110600FE6BC6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A6E22AA110600FE6BC6 /* Home.swift */; };
 		96A09A7122AA11D600FE6BC6 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A7022AA11D600FE6BC6 /* ClockView.swift */; };
-		96B9A4ED22AAFADE00D4B73F /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4EC22AAFADE00D4B73F /* Time.swift */; };
+		96B9A4ED22AAFADE00D4B73F /* Tempus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4EC22AAFADE00D4B73F /* Tempus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		96A09A4C22AA0F3D00FE6BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96A09A6E22AA110600FE6BC6 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		96A09A7022AA11D600FE6BC6 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
-		96B9A4EC22AAFADE00D4B73F /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		96B9A4EC22AAFADE00D4B73F /* Tempus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				96A09A4922AA0F3D00FE6BC6 /* LaunchScreen.storyboard */,
 				96A09A4622AA0F3D00FE6BC6 /* Preview Content */,
 				96A09A4022AA0F3A00FE6BC6 /* SceneDelegate.swift */,
-				96B9A4EC22AAFADE00D4B73F /* Time.swift */,
+				96B9A4EC22AAFADE00D4B73F /* Tempus.swift */,
 			);
 			path = TempusRomanum;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			files = (
 				96A09A3F22AA0F3A00FE6BC6 /* AppDelegate.swift in Sources */,
 				96A09A6F22AA110600FE6BC6 /* Home.swift in Sources */,
-				96B9A4ED22AAFADE00D4B73F /* Time.swift in Sources */,
+				96B9A4ED22AAFADE00D4B73F /* Tempus.swift in Sources */,
 				96A09A7122AA11D600FE6BC6 /* ClockView.swift in Sources */,
 				96A09A4122AA0F3A00FE6BC6 /* SceneDelegate.swift in Sources */,
 			);

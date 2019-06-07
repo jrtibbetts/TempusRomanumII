@@ -4,13 +4,13 @@ import SwiftUI
 
 struct ClockView : View {
 
-    @EnvironmentObject private var romanTime: RomanTime
+    @EnvironmentObject private var tempus: Tempus
     
     var body: some View {
         VStack {
-            Button(action: { self.romanTime.useMilitaryTime.toggle() },
+            Button(action: { self.tempus.useMilitaryTime.toggle() },
                    label: {
-                    Text(self.romanTime.timeString)
+                    Text(self.tempus.modernTimeString)
                         .frame(minWidth: 100)
                         .font(.headline)
                     }
@@ -29,7 +29,7 @@ struct ClockView : View {
 struct Clock_Previews : PreviewProvider {
     static var previews: some View {
         ClockView()
-            .environmentObject(RomanTime())
+            .environmentObject(Tempus())
     }
 }
 #endif

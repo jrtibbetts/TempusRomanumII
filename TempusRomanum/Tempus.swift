@@ -3,9 +3,9 @@
 import Combine
 import SwiftUI
 
-final class RomanTime: BindableObject {
+final class Tempus: BindableObject {
     
-    let didChange = PassthroughSubject<RomanTime, Never>()
+    let didChange = PassthroughSubject<Tempus, Never>()
     
     var useMilitaryTime = false {
         didSet {
@@ -28,7 +28,7 @@ final class RomanTime: BindableObject {
     }()
     
     // The
-    var timeString: String {
+    var modernTimeString: String {
         if useMilitaryTime {
             return militaryDateFormatter.string(from: Date())
         } else {
