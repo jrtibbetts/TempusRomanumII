@@ -9,7 +9,15 @@ public typealias Times = (Date, Date)
 /// or modern 12- or 24-hour style.
 final public class Tempus: BindableObject {
     
-    // MARK: - Bound Properties
+    // MARK: - Observed Properties
+    
+    /// The current date's sunrise and sunset times. If this is non-`nil`, then the Roman
+    /// time can be obtained from `romanTimeString`.
+    public var sunriseSunset: SunriseSunset? = nil {
+        didSet {
+            didChange.send(self)
+        }
+    }
 
     /// The clock time. Changes are propagated to subscribers.
     public var time: Date? {
@@ -40,10 +48,6 @@ final public class Tempus: BindableObject {
     public var romanTimeString: String? {
         return sunriseSunset?.romanHour()?.string
     }
-    
-    /// The current date's sunrise and sunset times. If this is non-`nil`, then the Roman
-    /// time can be obtained from `romanTimeString`.
-    public var sunriseSunset: SunriseSunset? = nil
 
     public var updateInterval: TimeInterval? {
         didSet {
