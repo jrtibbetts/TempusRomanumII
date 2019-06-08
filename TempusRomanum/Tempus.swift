@@ -3,25 +3,23 @@
 import Combine
 import SwiftUI
 
+public typealias Times = (Date, Date)
+
 /// Tracks the current time and formats it in the Roman style (e.g. *quinta hora noctis*)
 /// or modern 12- or 24-hour style.
 final public class Tempus: BindableObject {
     
     // MARK: - Bound Properties
-    
+
     /// The clock time. Changes are propagated to subscribers.
-    public var time: Date = Date() {
-        didSet {
-            didChange.send(self)
-        }
+    public var time: Date? {
+        didSet { didChange.send(self) }
     }
     
     /// Determines whether `modernTimeString` should be in 12- or 24- hour
     /// style. Changes are propagated to subscribers.
     public var useMilitaryTime = false {
-        didSet {
-            didChange.send(self)
-        }
+        didSet { didChange.send(self) }
     }
     
     // MARK: - Public Properties
@@ -39,11 +37,19 @@ final public class Tempus: BindableObject {
         }
     }
     
+    public var romanTimeString: String? {
+        return sunriseSunset?.romanHour()?.string
+    }
+    
+    /// The current date's sunrise and sunset times. If this is non-`nil`, then the Roman
+    /// time can be obtained from `romanTimeString`.
+    public var sunriseSunset: SunriseSunset? = nil
+
     public var updateInterval: TimeInterval? {
         didSet {
             if let interval = updateInterval {
                 Timer.scheduledTimer(withTimeInterval: interval,
-                                     repeats: true) { _ in 
+                                     repeats: true) { _ in
                     self.time = Date()
                 }
             }

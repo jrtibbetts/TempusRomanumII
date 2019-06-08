@@ -17,10 +17,12 @@ struct ClockView : View {
                     }
             )
 
-            Text("quinta hora noctis")
-                .font(.subheadline)
-                .italic()
-                .padding(.top, 10)
+            if self.tempus.romanTimeString != nil {
+                Text(self.tempus.romanTimeString!)
+                    .font(.subheadline)
+                    .italic()
+                    .padding(.top, 8)
+            }
         }
     }
     
@@ -31,6 +33,11 @@ struct Clock_Previews : PreviewProvider {
     static var previews: some View {
         let tempus = Tempus()
         tempus.updateInterval = 60.0  // every minute
+        
+        let twelve01am = Calendar.current.startOfDay(for: Date())
+        let sunrise = twelve01am.addingTimeInterval(6 * 60 * 60)
+        let sunset = twelve01am.addingTimeInterval(19 * 60 * 60)
+        tempus.sunriseSunset = SunriseSunset(sunrise: sunrise, sunset: sunset)
         
         return ClockView()
             .environmentObject(tempus)
