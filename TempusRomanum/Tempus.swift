@@ -3,16 +3,57 @@
 import Combine
 import SwiftUI
 
-final class Tempus: BindableObject {
+/// Tracks the current time and formats it in the Roman style (e.g. *quinta hora noctis*)
+/// or modern 12- or 24-hour style.
+final public class Tempus: BindableObject {
     
-    let didChange = PassthroughSubject<Tempus, Never>()
+    // MARK: - Bound Properties
     
-    var useMilitaryTime = false {
+    /// The clock time. Changes are propagated to subscribers.
+    public var time: Date = Date() {
         didSet {
             didChange.send(self)
         }
     }
     
+    /// Determines whether `modernTimeString` should be in 12- or 24- hour
+    /// style. Changes are propagated to subscribers.
+    public var useMilitaryTime = false {
+        didSet {
+            didChange.send(self)
+        }
+    }
+    
+    // MARK: - Public Properties
+    
+    public let didChange = PassthroughSubject<Tempus, Never>()
+
+    /// The modern representation of the current time, in either
+    /// short (`3:24 PM`) or military (`1524`) style, depending on
+    /// the value of `useMiltaryTime`,
+    public var modernTimeString: String {
+        if useMilitaryTime {
+            return militaryDateFormatter.string(from: Date())
+        } else {
+            return dateFormatter.string(from: Date())
+        }
+    }
+    
+    public var updateInterval: TimeInterval? {
+        didSet {
+            if let interval = updateInterval {
+                Timer.scheduledTimer(withTimeInterval: interval,
+                                     repeats: true) { _ in 
+                    self.time = Date()
+                }
+            }
+        }
+    }
+
+    // MARK: - Private Properties
+    
+    private var timer: Timer?
+
     private var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm a"
@@ -27,13 +68,4 @@ final class Tempus: BindableObject {
         return formatter
     }()
     
-    // The
-    var modernTimeString: String {
-        if useMilitaryTime {
-            return militaryDateFormatter.string(from: Date())
-        } else {
-            return dateFormatter.string(from: Date())
-        }
-    }
-
 }

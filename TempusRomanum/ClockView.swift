@@ -8,6 +8,7 @@ struct ClockView : View {
     
     var body: some View {
         VStack {
+            // Switches between 12- and 24-hour style.
             Button(action: { self.tempus.useMilitaryTime.toggle() },
                    label: {
                     Text(self.tempus.modernTimeString)
@@ -28,8 +29,11 @@ struct ClockView : View {
 #if DEBUG
 struct Clock_Previews : PreviewProvider {
     static var previews: some View {
-        ClockView()
-            .environmentObject(Tempus())
+        let tempus = Tempus()
+        tempus.updateInterval = 60.0  // every minute
+        
+        return ClockView()
+            .environmentObject(tempus)
     }
 }
 #endif
