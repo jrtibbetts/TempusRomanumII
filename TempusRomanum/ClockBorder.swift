@@ -4,21 +4,9 @@ import SwiftUI
 
 struct ClockBorder : View {
     
-    func edgePoints(for geometry: GeometryProxy) -> [CGFloat: CGPoint] {
-        let frame = self.frame(for: geometry)
-        let center = CGPoint(x: frame.size.width / 2.0,
-                             y: frame.size.height / 2.0)
-        let radius = center.x
-        
-        return (0..<24).reduce(into: [CGFloat: CGPoint]()) { (result, i) in
-            let angleDegrees = CGFloat(i) / 24.0 * 360.0
-            let sine = sin(angleDegrees)
-            let cosine = cos(angleDegrees)
-            let edgePoint = CGPoint(x: center.x + (cosine * radius),
-                                    y: center.y + (sine * radius))
-            result[angleDegrees] = edgePoint
-        }
-    }
+    @State var numberOfMarks: Int = 24
+    
+    @State var markLength: CGFloat = 20.0
     
     var body: some View {
         GeometryReader { geometry in
@@ -37,24 +25,40 @@ struct ClockBorder : View {
                         
                         self.edgePoints(for: geometry).forEach { (angle, edgePoint) in
                             path.move(to: edgePoint)
-                            let lineEndPoint = CGPoint(x: center.x + (cos(angle) * (radius - 20.0)),
-                                                       y: center.y + (sin(angle) * (radius - 20.0)))
+                            let lineEndPoint = CGPoint(x: center.x + (cos(angle) * (radius - self.markLength)),
+                                                       y: center.y + (sin(angle) * (radius - self.markLength)))
                             path.addLine(to: lineEndPoint)
                         }
                     }
                         .stroke()
                 }
-                
-//                List {
-//                    ForEach(self.edgePoints(for: geometry).values) { value in
-//                        Text("Point foo")
+//
+//                ScrollView {
+//                    VStack(alignment: .leading, spacing: 5.0) {
+//                        ForEach(0..<24) { i in
+//                            Text("Point \(i): \(CGFloat(i) / 24.0 * CGFloat.pi * 2.0)")
+//                        }
 //                    }
 //                }
             }
         }
     }
     
-    func frame(for geometry: GeometryProxy) -> CGRect {
+    private func edgePoints(for geometry: GeometryProxy) -> [CGFloat: CGPoint] {
+        let frame = self.frame(for: geometry)
+        let center = CGPoint(x: frame.size.width / 2.0,
+                             y: frame.size.height / 2.0)
+        let radius = center.x
+        
+        return (0..<numberOfMarks).reduce(into: [CGFloat: CGPoint]()) { (result, i) in
+            let radians = (CGFloat(i) / CGFloat(numberOfMarks)) * (2.0 * CGFloat.pi)
+            let edgePoint = CGPoint(x: center.x + (cos(radians) * radius),
+                                    y: center.y + (sin(radians) * radius))
+            result[radians] = edgePoint
+        }
+    }
+
+    private func frame(for geometry: GeometryProxy) -> CGRect {
         let width: CGFloat = min(geometry.size.width, geometry.size.height)
         let frame = CGRect(x: 0.0, y: 0.0, width: width, height: width)
         
