@@ -3,6 +3,9 @@
 import SwiftUI
 
 struct ClockFace : View {
+    
+    @EnvironmentObject private var tempus: Tempus
+
     var body: some View {
         GeometryReader { geometry in
             Path { path in
@@ -11,7 +14,7 @@ struct ClockFace : View {
                 
                 path.addEllipse(in: frame)
             }
-                .fill(LinearGradient(gradient: .init(colors: [Color("Daylight"), Color("Nighttime")]), startPoint: .init(x: 0.5, y: 0.0), endPoint: .init(x: 0.5, y: 0.5)))
+                .fill(LinearGradient(gradient: .init(colors: [Color("Daylight"), Color("Nighttime")]), startPoint: .init(x: 0.5, y: 0.0), endPoint: .init(x: 0.5, y: 0.4)))
         }
     }
     
@@ -22,7 +25,14 @@ struct ClockFace : View {
 #if DEBUG
 struct ClockFace_Previews : PreviewProvider {
     static var previews: some View {
-        ClockFace()
+        let tempus = Tempus()
+        let twelve01am = Calendar.current.startOfDay(for: Date())
+        let sunrise = twelve01am.addingTimeInterval(6 * 60 * 60)
+        let sunset = twelve01am.addingTimeInterval(19 * 60 * 60)
+        tempus.sunriseSunset = SunriseSunset(sunrise: sunrise, sunset: sunset)
+        
+        return ClockFace()
+            .environmentObject(tempus)
     }
 }
 #endif
