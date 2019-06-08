@@ -4,9 +4,13 @@ import SwiftUI
 
 struct ClockBorder : View {
     
+    @State var color = Color.black
+    
     @State var numberOfMarks: Int = 24
     
     @State var markLength: CGFloat = 20.0
+    
+    @State var thickness: Length = 5
     
     var body: some View {
         GeometryReader { geometry in
@@ -15,7 +19,7 @@ struct ClockBorder : View {
                     Path { path in
                         path.addEllipse(in: self.frame(for: geometry))
                     }
-                        .stroke()
+                        .stroke(self.color, lineWidth: self.thickness)
                     
                     Path { path in
                         let frame = self.frame(for: geometry)
@@ -30,7 +34,7 @@ struct ClockBorder : View {
                             path.addLine(to: lineEndPoint)
                         }
                     }
-                        .stroke()
+                        .stroke(self.color, lineWidth: self.thickness)
                 }
 //
 //                ScrollView {

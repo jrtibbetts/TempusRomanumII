@@ -8,6 +8,16 @@ struct ClockView : View {
     
     var body: some View {
         VStack {
+            Spacer()
+            
+            HStack {
+                Spacer()
+                
+                ClockFace()
+                
+                Spacer()
+            }
+            
             // Switches between 12- and 24-hour style.
             Button(action: { self.tempus.useMilitaryTime.toggle() },
                    label: {
@@ -23,6 +33,8 @@ struct ClockView : View {
                     .italic()
                     .padding(.top, 8)
             }
+            
+            Spacer()
         }
     }
     
