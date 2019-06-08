@@ -7,16 +7,8 @@ struct ClockView : View {
     @EnvironmentObject private var tempus: Tempus
     
     var body: some View {
-        VStack {
-            Spacer()
-            
-            HStack {
-                Spacer()
-                
-                ClockFace()
-                
-                Spacer()
-            }
+        VStack(alignment: .center) {
+            ClockFace()
             
             // Switches between 12- and 24-hour style.
             Button(action: { self.tempus.useMilitaryTime.toggle() },
@@ -36,6 +28,7 @@ struct ClockView : View {
             
             Spacer()
         }
+            .padding(10)
     }
     
 }

@@ -5,7 +5,7 @@ import SwiftUI
 struct ClockFace : View {
     
     @EnvironmentObject private var tempus: Tempus
-
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -22,6 +22,7 @@ struct ClockFace : View {
                 ClockBorder()
             }
         }
+            .padding(10)
     }
     
     static let gradientStart = Color(red: 239.0 / 255, green: 120.0 / 255, blue: 221.0 / 255)
