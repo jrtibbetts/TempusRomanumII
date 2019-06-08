@@ -8,13 +8,19 @@ struct ClockFace : View {
 
     var body: some View {
         GeometryReader { geometry in
-            Path { path in
-                let width: CGFloat = min(geometry.size.width, geometry.size.height)
-                let frame = CGRect(x: 0.0, y: 0.0, width: width, height: width)
+            ZStack {
+                Path { path in
+                    let width: CGFloat = min(geometry.size.width, geometry.size.height)
+                    let frame = CGRect(x: 0.0, y: 0.0, width: width, height: width)
+                    path.addEllipse(in: frame)
+                    }
+                    .fill(LinearGradient(gradient: .init(colors: [Color("Daylight"), Color("Nighttime")]),
+                                         startPoint: .init(x: 0.5, y: 0.0),
+                                         endPoint: .init(x: 0.5, y: 0.4))
+                )
                 
-                path.addEllipse(in: frame)
+                ClockBorder()
             }
-                .fill(LinearGradient(gradient: .init(colors: [Color("Daylight"), Color("Nighttime")]), startPoint: .init(x: 0.5, y: 0.0), endPoint: .init(x: 0.5, y: 0.4)))
         }
     }
     
