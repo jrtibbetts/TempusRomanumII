@@ -4,13 +4,9 @@ import SwiftUI
 
 struct ClockBorder : View {
     
-    @State var color = Color.black
+    @EnvironmentObject private var settings: ClockSettings
     
     @State var numberOfMarks: Int = 24
-    
-    @State var markLength: CGFloat = 20.0
-    
-    @State var thickness: Length = 5
     
     var body: some View {
         GeometryReader { geometry in
@@ -19,7 +15,7 @@ struct ClockBorder : View {
                     Path { path in
                         path.addEllipse(in: self.frame(for: geometry))
                     }
-                        .stroke(self.color, lineWidth: self.thickness)
+                        .stroke(self.settings.borderColor, lineWidth: self.settings.borderWidth)
                     
                     Path { path in
                         let frame = self.frame(for: geometry)
@@ -29,21 +25,13 @@ struct ClockBorder : View {
                         
                         self.edgePoints(for: geometry).forEach { (angle, edgePoint) in
                             path.move(to: edgePoint)
-                            let lineEndPoint = CGPoint(x: center.x + (cos(angle) * (radius - self.markLength)),
-                                                       y: center.y + (sin(angle) * (radius - self.markLength)))
+                            let lineEndPoint = CGPoint(x: center.x + (cos(angle) * (radius - self.settings.modernMarkLength)),
+                                                       y: center.y + (sin(angle) * (radius - self.settings.modernMarkLength)))
                             path.addLine(to: lineEndPoint)
                         }
                     }
-                        .stroke(self.color, lineWidth: self.thickness)
+                        .stroke(self.settings.borderColor, lineWidth: self.settings.borderWidth)
                 }
-//
-//                ScrollView {
-//                    VStack(alignment: .leading, spacing: 5.0) {
-//                        ForEach(0..<24) { i in
-//                            Text("Point \(i): \(CGFloat(i) / 24.0 * CGFloat.pi * 2.0)")
-//                        }
-//                    }
-//                }
             }
         }
     }
@@ -75,6 +63,7 @@ struct ClockBorder : View {
 struct ClockBorder_Previews : PreviewProvider {
     static var previews: some View {
         ClockBorder()
+            .environmentObject(ClockSettings())
     }
 }
 #endif

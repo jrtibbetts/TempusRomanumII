@@ -7,11 +7,19 @@ final public class ClockSettings: BindableObject {
 
     // MARK: - Bound Properties
     
+    public var borderColor = Color.black {
+        didSet { didChange.send(self) }
+    }
+    
+    public var borderWidth = Length(5) {
+        didSet { didChange.send(self) }
+    }
+    
     public var daylightColor = Color("Daylight") {
         didSet { didChange.send(self) }
     }
     
-    public var modernMarkSize = Length(10) {
+    public var modernMarkLength = Length(10) {
         didSet { didChange.send(self) }
     }
     
