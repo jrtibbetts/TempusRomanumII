@@ -1,0 +1,3 @@
+[submodule "CoreLocation"]
+	path = CoreLocation
+	url = git@github.com:PromiseKit/CoreLocation.git
