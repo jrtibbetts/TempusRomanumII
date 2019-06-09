@@ -34,7 +34,7 @@ struct ClockView : View {
 }
 
 #if DEBUG
-struct Clock_Previews : PreviewProvider {
+struct ClockView_Previews : PreviewProvider {
     static var previews: some View {
         let tempus = Tempus()
         tempus.updateInterval = 60.0  // every minute
