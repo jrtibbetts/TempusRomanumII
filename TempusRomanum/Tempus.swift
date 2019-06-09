@@ -3,8 +3,6 @@
 import Combine
 import SwiftUI
 
-public typealias Times = (Date, Date)
-
 /// Tracks the current time and formats it in the Roman style (e.g. *quinta hora noctis*)
 /// or modern 12- or 24-hour style.
 final public class Tempus: BindableObject {
