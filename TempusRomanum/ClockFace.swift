@@ -31,7 +31,7 @@ struct ClockFace_Previews : PreviewProvider {
         let twelve01am = Calendar.current.startOfDay(for: Date())
         let sunrise = twelve01am.addingTimeInterval(6 * 60 * 60)
         let sunset = twelve01am.addingTimeInterval(19 * 60 * 60)
-        tempus.sunriseSunset = SunriseSunset(sunrise: sunrise, sunset: sunset)
+        tempus.sunriseSunset = SimpleSunriseSunset(sunrise: sunrise, sunset: sunset)
         
         return ClockFace()
             .environmentObject(ClockSettings())
