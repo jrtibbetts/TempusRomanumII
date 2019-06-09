@@ -12,25 +12,29 @@ struct ClockBorder : View {
         GeometryReader { geometry in
             VStack {
                 ZStack {
+                    // Border
                     Path { path in
                         path.addEllipse(in: self.frame(for: geometry))
                     }
                         .stroke(self.settings.borderColor, lineWidth: self.settings.borderWidth)
                     
-                    Path { path in
-                        let frame = self.frame(for: geometry)
-                        let center = CGPoint(x: frame.size.width / 2.0,
-                                             y: frame.size.height / 2.0)
-                        let radius = center.x
-                        
-                        self.edgePoints(for: geometry).forEach { (angle, edgePoint) in
-                            path.move(to: edgePoint)
-                            let lineEndPoint = CGPoint(x: center.x + (cos(angle) * (radius - self.settings.modernMarkLength)),
-                                                       y: center.y + (sin(angle) * (radius - self.settings.modernMarkLength)))
-                            path.addLine(to: lineEndPoint)
+                    // Modern hour marks
+                    if self.settings.showModernMarks {
+                        Path { path in
+                            let frame = self.frame(for: geometry)
+                            let center = CGPoint(x: frame.size.width / 2.0,
+                                                 y: frame.size.height / 2.0)
+                            let radius = center.x
+                            
+                            self.edgePoints(for: geometry).forEach { (angle, edgePoint) in
+                                path.move(to: edgePoint)
+                                let lineEndPoint = CGPoint(x: center.x + (cos(angle) * (radius - self.settings.modernMarkLength)),
+                                                           y: center.y + (sin(angle) * (radius - self.settings.modernMarkLength)))
+                                path.addLine(to: lineEndPoint)
+                            }
                         }
+                            .stroke(self.settings.borderColor, lineWidth: self.settings.borderWidth)
                     }
-                        .stroke(self.settings.borderColor, lineWidth: self.settings.borderWidth)
                 }
             }
         }
