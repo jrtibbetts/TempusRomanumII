@@ -5,7 +5,10 @@ import SwiftUI
 struct Clock : View {
     
     var body: some View {
-        Text("Foo")
+        ZStack {
+            ClockFace()
+            ClockBorder()
+        }
     }
     
 }
@@ -14,6 +17,8 @@ struct Clock : View {
 struct Clock_Previews : PreviewProvider {
     static var previews: some View {
         Clock()
+            .environmentObject(ClockSettings())
+            .environmentObject(Tempus())
     }
 }
 #endif

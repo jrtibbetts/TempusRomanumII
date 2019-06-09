@@ -10,22 +10,16 @@ struct ClockFace : View {
     
     var body: some View {
         GeometryReader { geometry in
-            ZStack {
-                Path { path in
-                    let width: CGFloat = min(geometry.size.width, geometry.size.height)
-                    let frame = CGRect(x: 0.0, y: 0.0, width: width, height: width)
-                    path.addEllipse(in: frame)
-                    }
-                    .fill(LinearGradient(gradient: .init(colors: [self.settings.daylightColor, self.settings.nighttimeColor]),
-                                         startPoint: .init(x: 0.5, y: 0.0),
-                                         endPoint: .init(x: 0.5, y: 0.4))
-                )
-                
-                ClockBorder()
-                    .environmentObject(self.settings)
+            Path { path in
+                let width: CGFloat = min(geometry.size.width, geometry.size.height)
+                let frame = CGRect(x: 0.0, y: 0.0, width: width, height: width)
+                path.addEllipse(in: frame)
             }
+                .fill(LinearGradient(gradient: .init(colors: [self.settings.daylightColor, self.settings.nighttimeColor]),
+                                     startPoint: .init(x: 0.5, y: 0.0),
+                                     endPoint: .init(x: 0.5, y: 0.4))
+            )
         }
-            .padding(10)
     }
 
 }

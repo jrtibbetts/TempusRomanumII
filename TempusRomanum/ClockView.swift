@@ -8,7 +8,7 @@ struct ClockView : View {
     
     var body: some View {
         VStack(alignment: .center) {
-            ClockFace()
+            Clock()
             
             // Switches between 12- and 24-hour style.
             Button(action: { self.tempus.useMilitaryTime.toggle() },
@@ -18,12 +18,13 @@ struct ClockView : View {
                         .font(.headline)
                     }
             )
+                .padding(.top, 30)
 
             if self.tempus.romanTimeString != nil {
                 Text(self.tempus.romanTimeString!)
                     .font(.subheadline)
                     .italic()
-                    .padding(.top, 8)
+                    .padding(.top, 10)
             }
             
             Spacer()
@@ -45,6 +46,7 @@ struct ClockView_Previews : PreviewProvider {
         tempus.sunriseSunset = SunriseSunset(sunrise: sunrise, sunset: sunset)
         
         return ClockView()
+            .environmentObject(ClockSettings())
             .environmentObject(tempus)
     }
 }
