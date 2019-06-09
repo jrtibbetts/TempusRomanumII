@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		96B9A4F722ABD8C000D4B73F /* ClockBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4F622ABD8C000D4B73F /* ClockBorder.swift */; };
 		96B9A4FB22AC692D00D4B73F /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4FA22AC692D00D4B73F /* Clock.swift */; };
 		96B9A4FD22AC6A0F00D4B73F /* ClockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4FC22AC6A0F00D4B73F /* ClockSettings.swift */; };
+		96B9A50022ACB31400D4B73F /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 96B9A4FF22ACB31400D4B73F /* PromiseKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B9A50022ACB31400D4B73F /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +117,9 @@
 			dependencies = (
 			);
 			name = TempusRomanum;
+			packageProductDependencies = (
+				96B9A4FF22ACB31400D4B73F /* PromiseKit */,
+			);
 			productName = TempusRomanum;
 			productReference = 96A09A3B22AA0F3A00FE6BC6 /* TempusRomanum.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +148,9 @@
 				Base,
 			);
 			mainGroup = 96A09A3222AA0F3A00FE6BC6;
+			packageReferences = (
+				96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
 			productRefGroup = 96A09A3C22AA0F3A00FE6BC6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -374,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		96B9A4FF22ACB31400D4B73F /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 96A09A3322AA0F3A00FE6BC6 /* Project object */;
 }
