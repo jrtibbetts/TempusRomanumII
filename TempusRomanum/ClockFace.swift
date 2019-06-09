@@ -34,8 +34,8 @@ struct ClockFace_Previews : PreviewProvider {
         tempus.sunriseSunset = SunriseSunset(sunrise: sunrise, sunset: sunset)
         
         return ClockFace()
-            .environmentObject(tempus)
             .environmentObject(ClockSettings())
+            .environmentObject(tempus)
     }
 }
 #endif
