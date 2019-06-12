@@ -19,11 +19,19 @@ final public class ClockSettings: BindableObject {
         didSet { didChange.send(self) }
     }
     
-    public var hourHandLengthProportion = 0.8 {
+    public var hourHandColor = Color.red {
         didSet { didChange.send(self) }
     }
     
-    public var minuteHandLengthProportion = 0.5 {
+    public var hourHandLengthProportion = CGFloat(0.5) {
+        didSet { didChange.send(self) }
+    }
+    
+    public var minuteHandColor = Color.orange {
+        didSet { didChange.send(self)}
+    }
+    
+    public var minuteHandLengthProportion = CGFloat(0.8) {
         didSet { didChange.send(self) }
     }
 
