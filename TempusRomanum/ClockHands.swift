@@ -6,6 +6,8 @@ struct ClockHand: View {
     
     @EnvironmentObject var tempus: Tempus
     
+    @State var angle = Angle(radians: 0)
+    
     @State var color = Color.red
     
     @State var lineWidth: CGFloat = 1.0
@@ -16,13 +18,12 @@ struct ClockHand: View {
         GeometryReader { geometry in
             Path { path in
                 let size = CGSize(width: geometry.size.width, height: geometry.size.height)
-                let center = CGPoint(x: size.width / 2.0,
-                                     y: size.height / 2.0)
+                let center = CGPoint(x: size.width / 2.0, y: size.height / 2.0)
                 let radius = center.x
                 let length = self.multiplier * radius
                 path.move(to: center)
-                let cosine = CGFloat(cos(self.tempus.time.hour24RotationAngle.radians))
-                let sine = CGFloat(sin(self.tempus.time.hour24RotationAngle.radians))
+                let cosine = CGFloat(cos(self.angle.radians))
+                let sine = CGFloat(sin(self.angle.radians))
                 path.addLine(to: CGPoint(x: center.x + cosine * length,
                                          y: center.y + sine * length))
             }
@@ -43,13 +44,15 @@ struct ClockHands : View {
         GeometryReader { geometry in
             VStack {
                 ZStack {
-                    ClockHand(color: self.settings.hourHandColor,
+                    ClockHand(angle: self.tempus.time.hour24RotationAngle,
+                              color: self.settings.hourHandColor,
                               lineWidth: 5.0,
                               multiplier: self.settings.hourHandLengthProportion)
                         .environmentObject(self.tempus)
                    
-                    ClockHand(color: self.settings.minuteHandColor,
-                              lineWidth: 4.0,
+                    ClockHand(angle: self.tempus.time.minutesAngle,
+                              color: self.settings.minuteHandColor,
+                              lineWidth: 3.0,
                               multiplier: self.settings.minuteHandLengthProportion)
                         .environmentObject(self.tempus)
                 }
