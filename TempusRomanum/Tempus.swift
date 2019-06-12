@@ -18,7 +18,7 @@ final public class Tempus: BindableObject {
     }
 
     /// The clock time. Changes are propagated to subscribers.
-    public var time: Date? {
+    public var time = Date() {
         didSet { didChange.send(self) }
     }
     

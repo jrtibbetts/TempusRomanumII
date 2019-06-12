@@ -30,7 +30,6 @@ public struct SunriseSunsetDotOrgProvider: SunriseSunsetProvider {
     // MARK: - SunriseSunsetProvider
 
     public func sunriseSunset() -> Promise<SunriseSunset> {
-        return CLLocationManager.
         return CLLocationManager.requestLocation().then { (locations) -> Promise<SunriseSunset> in
             return self.sunriseSunset(for: locations[0].coordinate)
         }
