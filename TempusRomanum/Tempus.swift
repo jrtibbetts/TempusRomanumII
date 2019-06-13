@@ -46,15 +46,18 @@ final public class Tempus: BindableObject {
     public var romanTimeString: String? {
         return sunriseSunset?.romanHour()?.string
     }
-
-    public var updateInterval: TimeInterval? {
+    
+    public var updateInterval: TimeInterval? = 60.0 {
         didSet {
             if let interval = updateInterval {
-                Timer.scheduledTimer(withTimeInterval: interval,
-                                     repeats: true) { _ in
+                timer?.invalidate()
+                timer = Timer.scheduledTimer(withTimeInterval: interval,
+                                             repeats: true) { _ in
                     self.time = Date()
                 }
             }
+            
+            didChange.send(self)
         }
     }
 
