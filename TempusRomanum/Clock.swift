@@ -11,6 +11,7 @@ struct Clock : View {
             ClockFace()
             ClockBorder()
             HourLines(color: .white, dates: tempus.sunriseSunset?.nighttimeHours, thickness: 2.0)
+            HourLines(color: .blue, dates: tempus.sunriseSunset?.daylightHours, thickness: 2.0)
             ClockHands()
         }
     }
