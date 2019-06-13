@@ -6,14 +6,14 @@ struct HourLines : View {
     
     @State var color = Color.white
     
-    @State var dates = [Date]()
+    @State var dates: [Date]? = nil
 
     @State var thickness = CGFloat(2.0)
     
     var body: some View {
         GeometryReader { geometry in
             Path { path in
-                self.dates.forEach() { date in
+                self.dates?.forEach() { date in
                     let width = min(geometry.size.width, geometry.size.height)
                     let center = CGPoint(x: width / 2.0, y: width / 2.0)
                     path.move(to: center)
