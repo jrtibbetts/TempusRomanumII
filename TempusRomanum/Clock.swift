@@ -8,6 +8,7 @@ struct Clock : View {
         ZStack {
             ClockFace()
             ClockBorder()
+            HourLines(color: .white, dates: [Date()], thickness: 2.0)
             ClockHands()
         }
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9651975422AF3869003C25B0 /* ClockHands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975322AF3869003C25B0 /* ClockHands.swift */; };
 		9651975622B00880003C25B0 /* Date+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975522B00880003C25B0 /* Date+Trigonometry.swift */; };
+		9651975822B1CD39003C25B0 /* HourLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975722B1CD39003C25B0 /* HourLines.swift */; };
 		96A09A3F22AA0F3A00FE6BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A3E22AA0F3A00FE6BC6 /* AppDelegate.swift */; };
 		96A09A4122AA0F3A00FE6BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A4022AA0F3A00FE6BC6 /* SceneDelegate.swift */; };
 		96A09A4522AA0F3D00FE6BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A09A4422AA0F3D00FE6BC6 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		9651975322AF3869003C25B0 /* ClockHands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockHands.swift; sourceTree = "<group>"; };
 		9651975522B00880003C25B0 /* Date+Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Trigonometry.swift"; sourceTree = "<group>"; };
+		9651975722B1CD39003C25B0 /* HourLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourLines.swift; sourceTree = "<group>"; };
 		96A09A3B22AA0F3A00FE6BC6 /* TempusRomanum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempusRomanum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A09A3E22AA0F3A00FE6BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A09A4022AA0F3A00FE6BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				9651975322AF3869003C25B0 /* ClockHands.swift */,
 				96B9A4FC22AC6A0F00D4B73F /* ClockSettings.swift */,
 				96A09A7022AA11D600FE6BC6 /* ClockView.swift */,
+				9651975722B1CD39003C25B0 /* HourLines.swift */,
 				96A09A4C22AA0F3D00FE6BC6 /* Info.plist */,
 				96A09A4922AA0F3D00FE6BC6 /* LaunchScreen.storyboard */,
 				96A09A4622AA0F3D00FE6BC6 /* Preview Content */,
@@ -233,6 +236,7 @@
 				96B9A51622AD5D8B00D4B73F /* SunriseSunsetDotOrgTimes.swift in Sources */,
 				96B9A4ED22AAFADE00D4B73F /* Tempus.swift in Sources */,
 				96B9A51522AD5D8B00D4B73F /* RomanTime.swift in Sources */,
+				9651975822B1CD39003C25B0 /* HourLines.swift in Sources */,
 				96B9A51422AD5D8B00D4B73F /* CLLocationCoordinate2D+Formatting.swift in Sources */,
 				96B9A4F722ABD8C000D4B73F /* ClockBorder.swift in Sources */,
 				9651975622B00880003C25B0 /* Date+Trigonometry.swift in Sources */,

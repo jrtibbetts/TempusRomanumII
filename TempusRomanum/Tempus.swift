@@ -29,8 +29,6 @@ final public class Tempus: BindableObject {
     }
     
     // MARK: - Public Properties
-    
-    public let didChange = PassthroughSubject<Tempus, Never>()
 
     /// The modern representation of the current time, in either
     /// short (`3:24 PM`) or military (`1524`) style, depending on
@@ -60,6 +58,10 @@ final public class Tempus: BindableObject {
             didChange.send(self)
         }
     }
+    
+    // MARK: - BindableObject
+    
+    public let didChange = PassthroughSubject<Tempus, Never>()
 
     // MARK: - Private Properties
     
