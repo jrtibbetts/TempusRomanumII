@@ -17,8 +17,9 @@ struct ClockHand: View {
     var body: some View {
         GeometryReader { geometry in
             Path { path in
-                let size = CGSize(width: geometry.size.width, height: geometry.size.height)
-                let center = CGPoint(x: size.width / 2.0, y: size.height / 2.0)
+                let width = min(geometry.size.width, geometry.size.height)
+                let height = width
+                let center = CGPoint(x: width / 2.0, y: height / 2.0)
                 let radius = center.x
                 let length = self.multiplier * radius
                 path.move(to: center)
@@ -64,10 +65,23 @@ struct ClockHands : View {
 
 #if DEBUG
 struct ClockHands_Previews : PreviewProvider {
+
+    static let tempus: Tempus = {
+        var tempus = Tempus()
+        tempus.updateInterval = 1.0
+        
+        return tempus
+    }()
+    
     static var previews: some View {
-        ClockHands()
-            .environmentObject(ClockSettings())
-            .environmentObject(Tempus())
+        ZStack {
+            ClockBorder()
+                .environmentObject(ClockSettings())
+            
+            ClockHands()
+                .environmentObject(ClockSettings())
+                .environmentObject(tempus)
+        }
     }
 }
 #endif

@@ -8,6 +8,7 @@ struct Clock : View {
         ZStack {
             ClockFace()
             ClockBorder()
+            ClockHands()
         }
     }
     
