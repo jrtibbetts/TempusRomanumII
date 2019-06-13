@@ -27,15 +27,9 @@ struct ClockFace : View {
 #if DEBUG
 struct ClockFace_Previews : PreviewProvider {
     static var previews: some View {
-        let tempus = Tempus()
-        let twelve01am = Calendar.current.startOfDay(for: Date())
-        let sunrise = twelve01am.addingTimeInterval(6 * 60 * 60)
-        let sunset = twelve01am.addingTimeInterval(19 * 60 * 60)
-        tempus.sunriseSunset = SimpleSunriseSunset(sunrise: sunrise, sunset: sunset)
-        
         return ClockFace()
             .environmentObject(ClockSettings())
-            .environmentObject(tempus)
+            .environmentObject(Tempus.debugInstance)
     }
 }
 #endif

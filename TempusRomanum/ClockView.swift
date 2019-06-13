@@ -37,17 +37,9 @@ struct ClockView : View {
 #if DEBUG
 struct ClockView_Previews : PreviewProvider {
     static var previews: some View {
-        let tempus = Tempus()
-        tempus.updateInterval = 60.0  // every minute
-        
-        let twelve01am = Calendar.current.startOfDay(for: Date())
-        let sunrise = twelve01am.addingTimeInterval(6 * 60 * 60)
-        let sunset = twelve01am.addingTimeInterval(19 * 60 * 60)
-        tempus.sunriseSunset = SimpleSunriseSunset(sunrise: sunrise, sunset: sunset)
-        
         return ClockView()
             .environmentObject(ClockSettings())
-            .environmentObject(tempus)
+            .environmentObject(Tempus.debugInstance)
     }
 }
 #endif

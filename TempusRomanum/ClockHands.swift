@@ -65,13 +65,6 @@ struct ClockHands : View {
 
 #if DEBUG
 struct ClockHands_Previews : PreviewProvider {
-
-    static let tempus: Tempus = {
-        var tempus = Tempus()
-        tempus.updateInterval = 1.0
-        
-        return tempus
-    }()
     
     static var previews: some View {
         ZStack {
@@ -80,7 +73,7 @@ struct ClockHands_Previews : PreviewProvider {
             
             ClockHands()
                 .environmentObject(ClockSettings())
-                .environmentObject(tempus)
+                .environmentObject(Tempus.debugInstance)
         }
     }
 }

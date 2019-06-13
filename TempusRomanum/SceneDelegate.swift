@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let clock = Clock()
             .environmentObject(ClockSettings())
-            .environmentObject(Tempus())
+            .environmentObject(Tempus.debugInstance)
         window.rootViewController = UIHostingController(rootView: clock)
         self.window = window
         window.makeKeyAndVisible()

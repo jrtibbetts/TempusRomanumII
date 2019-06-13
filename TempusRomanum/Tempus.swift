@@ -81,4 +81,16 @@ final public class Tempus: BindableObject {
         return formatter
     }()
     
+    // MARK: - Debugging
+    
+    public static var debugInstance: Tempus = {
+        let sunriseComponents = DateComponents(calendar: .current, timeZone: .current, year: 2019, month: 6, day: 12, hour: 5, minute: 44, second: 0)
+        let sunsetComponents = DateComponents(calendar: .current, timeZone: .current, year: 2019, month: 6, day: 12, hour: 20, minute: 35, second: 0)
+        let sunriseSunset = SimpleSunriseSunset(sunrise: sunriseComponents.date!, sunset: sunsetComponents.date!)
+        let tempus = Tempus()
+        tempus.sunriseSunset = sunriseSunset
+        
+        return tempus
+    }()
+
 }
