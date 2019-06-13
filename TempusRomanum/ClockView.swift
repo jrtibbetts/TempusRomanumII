@@ -7,29 +7,40 @@ struct ClockView : View {
     @EnvironmentObject private var tempus: Tempus
     
     var body: some View {
-        VStack(alignment: .center) {
-            Clock()
-            
-            // Switches between 12- and 24-hour style.
-            Button(action: { self.tempus.useMilitaryTime.toggle() },
-                   label: {
-                    Text(self.tempus.modernTimeString)
-                        .frame(minWidth: 100)
-                        .font(.headline)
-                    }
-            )
-                .padding(.top, 30)
+        NavigationView {
+            VStack(alignment: .center) {
+                Clock()
 
-            if self.tempus.romanTimeString != nil {
-                Text(self.tempus.romanTimeString!)
-                    .font(.subheadline)
-                    .italic()
-                    .padding(.top, 10)
+                // Switches between 12- and 24-hour style.
+                Button(action: { self.tempus.useMilitaryTime.toggle() },
+                       label: {
+                        Text(self.tempus.modernTimeString)
+                            .frame(minWidth: 100)
+                            .font(.headline)
+                }
+                    )
+                    .padding(.top, 30)
+
+                if self.tempus.romanTimeString != nil {
+                    Text(self.tempus.romanTimeString!)
+                        .font(.subheadline)
+                        .italic()
+                        .padding(.top, 10)
+                }
+
+                Spacer()
             }
-            
-            Spacer()
+                .padding(10)
         }
-            .padding(10)
+            .navigationBarItems(trailing: /* Text("Kreplach") */
+                PresentationButton(
+                    Image(systemName: "settings"),
+                    destination: SettingsView()
+                )
+            )
+            .navigationBarTitle(
+                Text("TEMPUS ROMANUM")
+        )
     }
     
 }

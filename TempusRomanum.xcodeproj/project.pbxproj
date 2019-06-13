@@ -10,6 +10,7 @@
 		9651975422AF3869003C25B0 /* ClockHands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975322AF3869003C25B0 /* ClockHands.swift */; };
 		9651975622B00880003C25B0 /* Date+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975522B00880003C25B0 /* Date+Trigonometry.swift */; };
 		9651975822B1CD39003C25B0 /* HourLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975722B1CD39003C25B0 /* HourLines.swift */; };
+		968A67AF22B1EBD400657E93 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A67AE22B1EBD400657E93 /* SettingsView.swift */; };
 		96A09A3F22AA0F3A00FE6BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A3E22AA0F3A00FE6BC6 /* AppDelegate.swift */; };
 		96A09A4122AA0F3A00FE6BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A4022AA0F3A00FE6BC6 /* SceneDelegate.swift */; };
 		96A09A4522AA0F3D00FE6BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A09A4422AA0F3D00FE6BC6 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		9651975322AF3869003C25B0 /* ClockHands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockHands.swift; sourceTree = "<group>"; };
 		9651975522B00880003C25B0 /* Date+Trigonometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Trigonometry.swift"; sourceTree = "<group>"; };
 		9651975722B1CD39003C25B0 /* HourLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourLines.swift; sourceTree = "<group>"; };
+		968A67AE22B1EBD400657E93 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		96A09A3B22AA0F3A00FE6BC6 /* TempusRomanum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempusRomanum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A09A3E22AA0F3A00FE6BC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A09A4022AA0F3A00FE6BC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				96A09A4622AA0F3D00FE6BC6 /* Preview Content */,
 				96B9A4F222AB3F5700D4B73F /* RomanNumeral.swift */,
 				96A09A4022AA0F3A00FE6BC6 /* SceneDelegate.swift */,
+				968A67AE22B1EBD400657E93 /* SettingsView.swift */,
 				96B9A51922AD5EC700D4B73F /* Stylobate */,
 				96B9A50A22AD5D5100D4B73F /* SunriseSunset */,
 				96B9A4EC22AAFADE00D4B73F /* Tempus.swift */,
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968A67AF22B1EBD400657E93 /* SettingsView.swift in Sources */,
 				96B9A51722AD5D8B00D4B73F /* SunriseSunsetProvider.swift in Sources */,
 				9651975422AF3869003C25B0 /* ClockHands.swift in Sources */,
 				96B9A50722AD5BDC00D4B73F /* Codable+Utils.swift in Sources */,
