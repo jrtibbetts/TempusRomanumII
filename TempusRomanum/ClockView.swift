@@ -30,17 +30,18 @@ struct ClockView : View {
 
                 Spacer()
             }
+                .navigationBarTitle(
+                    Text("TEMPUS ROMANUM")
+                )
+
                 .padding(10)
         }
-            .navigationBarItems(trailing: /* Text("Kreplach") */
-                PresentationButton(
-                    Image(systemName: "settings"),
-                    destination: SettingsView()
-                )
-            )
-            .navigationBarTitle(
-                Text("TEMPUS ROMANUM")
-        )
+//            .navigationBarItems(trailing: /* Text("Kreplach") */
+//                PresentationButton(
+//                    Image(systemName: "settings"),
+//                    destination: SettingsView()
+//                )
+//        )
     }
     
 }
