@@ -5,7 +5,7 @@ import SwiftUI
 
 /// Tracks the current time and formats it in the Roman style (e.g. *quinta hora noctis*)
 /// or modern 12- or 24-hour style.
-final public class Tempus: BindableObject {
+final public class Tempus: ObservableObject {
     
     // MARK: - Observed Properties
     
@@ -59,7 +59,7 @@ final public class Tempus: BindableObject {
         }
     }
     
-    // MARK: - BindableObject
+    // MARK: - ObservableObject
     
     public let didChange = PassthroughSubject<Tempus, Never>()
 

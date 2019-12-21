@@ -3,7 +3,7 @@
 import Combine
 import SwiftUI
 
-final public class ClockSettings: BindableObject {
+final public class ClockSettings: ObservableObject {
 
     // MARK: - Bound Properties
     
@@ -11,7 +11,7 @@ final public class ClockSettings: BindableObject {
         didSet { didChange.send(self) }
     }
     
-    public var borderWidth = Length(3) {
+    public var borderWidth = CGFloat(3) {
         didSet { didChange.send(self) }
     }
     
@@ -35,7 +35,7 @@ final public class ClockSettings: BindableObject {
         didSet { didChange.send(self) }
     }
 
-    public var modernMarkLength = Length(10) {
+    public var modernMarkLength = CGFloat(10) {
         didSet { didChange.send(self) }
     }
     
@@ -47,7 +47,7 @@ final public class ClockSettings: BindableObject {
         didSet { didChange.send(self) }
     }
 
-    // MARK: - BindableObject Properties
+    // MARK: - ObservableObject Properties
     
     public let didChange = PassthroughSubject<ClockSettings, Never>()
 
