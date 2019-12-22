@@ -7,7 +7,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
@@ -19,13 +18,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // `application:configurationForConnectingSceneSession` instead).
 
         // Use a UIHostingController as window root view controller
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        let clock = Clock()
-            .environmentObject(ClockSettings())
-            .environmentObject(Tempus())
-        window.rootViewController = UIHostingController(rootView: clock)
-        self.window = window
-        window.makeKeyAndVisible()
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            let clock = Clock()
+                .environmentObject(ClockSettings())
+                .environmentObject(Tempus())
+            window.rootViewController = UIHostingController(rootView: clock)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
