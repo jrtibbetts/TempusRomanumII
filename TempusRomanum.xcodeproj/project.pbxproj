@@ -98,8 +98,8 @@
 		96A09A3D22AA0F3A00FE6BC6 /* TempusRomanum */ = {
 			isa = PBXGroup;
 			children = (
+				96A09A4C22AA0F3D00FE6BC6 /* Info.plist */,
 				96A09A3E22AA0F3A00FE6BC6 /* AppDelegate.swift */,
-				96A09A4422AA0F3D00FE6BC6 /* Assets.xcassets */,
 				96B9A4FA22AC692D00D4B73F /* Clock.swift */,
 				96B9A4F622ABD8C000D4B73F /* ClockBorder.swift */,
 				96B9A4F422AB736000D4B73F /* ClockFace.swift */,
@@ -107,15 +107,15 @@
 				96B9A4FC22AC6A0F00D4B73F /* ClockSettings.swift */,
 				96A09A7022AA11D600FE6BC6 /* ClockView.swift */,
 				9651975722B1CD39003C25B0 /* HourLines.swift */,
-				96A09A4C22AA0F3D00FE6BC6 /* Info.plist */,
-				96A09A4922AA0F3D00FE6BC6 /* LaunchScreen.storyboard */,
-				96A09A4622AA0F3D00FE6BC6 /* Preview Content */,
 				96B9A4F222AB3F5700D4B73F /* RomanNumeral.swift */,
 				96A09A4022AA0F3A00FE6BC6 /* SceneDelegate.swift */,
 				968A67AE22B1EBD400657E93 /* SettingsView.swift */,
+				96B9A4EC22AAFADE00D4B73F /* Tempus.swift */,
+				96A09A4422AA0F3D00FE6BC6 /* Assets.xcassets */,
+				96A09A4922AA0F3D00FE6BC6 /* LaunchScreen.storyboard */,
+				96A09A4622AA0F3D00FE6BC6 /* Preview Content */,
 				96B9A51922AD5EC700D4B73F /* Stylobate */,
 				96B9A50A22AD5D5100D4B73F /* SunriseSunset */,
-				96B9A4EC22AAFADE00D4B73F /* Tempus.swift */,
 			);
 			path = TempusRomanum;
 			sourceTree = "<group>";
@@ -327,6 +327,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -380,6 +381,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
