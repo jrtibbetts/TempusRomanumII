@@ -11,6 +11,7 @@
 		9651975622B00880003C25B0 /* Date+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975522B00880003C25B0 /* Date+Trigonometry.swift */; };
 		9651975822B1CD39003C25B0 /* HourLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975722B1CD39003C25B0 /* HourLines.swift */; };
 		968A67AF22B1EBD400657E93 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A67AE22B1EBD400657E93 /* SettingsView.swift */; };
+		96A067EB23AEE84F0082CF51 /* PMKCoreLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 96A067EA23AEE84F0082CF51 /* PMKCoreLocation */; };
 		96A09A3F22AA0F3A00FE6BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A3E22AA0F3A00FE6BC6 /* AppDelegate.swift */; };
 		96A09A4122AA0F3A00FE6BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A4022AA0F3A00FE6BC6 /* SceneDelegate.swift */; };
 		96A09A4522AA0F3D00FE6BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A09A4422AA0F3D00FE6BC6 /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96B9A50322ACB8D900D4B73F /* PMKFoundation in Frameworks */,
+				96A067EB23AEE84F0082CF51 /* PMKCoreLocation in Frameworks */,
 				96B9A50022ACB31400D4B73F /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +170,7 @@
 			packageProductDependencies = (
 				96B9A4FF22ACB31400D4B73F /* PromiseKit */,
 				96B9A50222ACB8D900D4B73F /* PMKFoundation */,
+				96A067EA23AEE84F0082CF51 /* PMKCoreLocation */,
 			);
 			productName = TempusRomanum;
 			productReference = 96A09A3B22AA0F3A00FE6BC6 /* TempusRomanum.app */;
@@ -200,6 +203,7 @@
 			packageReferences = (
 				96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */,
 				96B9A50122ACB8D900D4B73F /* XCRemoteSwiftPackageReference "Foundation" */,
+				96A067E923AEE84F0082CF51 /* XCRemoteSwiftPackageReference "CoreLocation" */,
 			);
 			productRefGroup = 96A09A3C22AA0F3A00FE6BC6 /* Products */;
 			projectDirPath = "";
@@ -444,6 +448,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		96A067E923AEE84F0082CF51 /* XCRemoteSwiftPackageReference "CoreLocation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PromiseKit/CoreLocation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
 		96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mxcl/PromiseKit/";
@@ -463,6 +475,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		96A067EA23AEE84F0082CF51 /* PMKCoreLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96A067E923AEE84F0082CF51 /* XCRemoteSwiftPackageReference "CoreLocation" */;
+			productName = PMKCoreLocation;
+		};
 		96B9A4FF22ACB31400D4B73F /* PromiseKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */;

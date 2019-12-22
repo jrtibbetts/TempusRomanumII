@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "PMKCoreLocation",
+        "repositoryURL": "https://github.com/PromiseKit/CoreLocation",
+        "state": {
+          "branch": null,
+          "revision": "c4ea4dba6e0516986b3cb1d93c86f6991ce46861",
+          "version": "3.1.0"
+        }
+      },
+      {
         "package": "PMKFoundation",
         "repositoryURL": "https://github.com/PromiseKit/Foundation",
         "state": {
