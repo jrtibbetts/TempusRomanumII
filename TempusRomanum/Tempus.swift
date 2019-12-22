@@ -11,22 +11,14 @@ final public class Tempus: ObservableObject {
     
     /// The current date's sunrise and sunset times. If this is non-`nil`, then the Roman
     /// time can be obtained from `romanTimeString`.
-    public var sunriseSunset: SunriseSunset? = nil {
-        didSet {
-            didChange.send(self)
-        }
-    }
+    @Published public var sunriseSunset: SunriseSunset? = nil
 
     /// The clock time. Changes are propagated to subscribers.
-    public var time = Date() {
-        didSet { didChange.send(self) }
-    }
-    
+    @Published public var time = Date()
+
     /// Determines whether `modernTimeString` should be in 12- or 24- hour
     /// style. Changes are propagated to subscribers.
-    public var useMilitaryTime = false {
-        didSet { didChange.send(self) }
-    }
+    @Published public var useMilitaryTime = false
     
     // MARK: - Public Properties
 
