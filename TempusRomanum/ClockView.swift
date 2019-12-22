@@ -46,7 +46,6 @@ struct ClockView : View {
     
 }
 
-#if DEBUG
 struct ClockView_Previews : PreviewProvider {
     static var previews: some View {
         return ClockView()
@@ -54,4 +53,3 @@ struct ClockView_Previews : PreviewProvider {
             .environmentObject(Tempus.debugInstance)
     }
 }
-#endif

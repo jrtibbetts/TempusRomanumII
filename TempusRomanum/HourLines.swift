@@ -21,7 +21,7 @@ struct HourLines : View {
                     let edgePoint = CGPoint(x: center.x + CGFloat(cos(date.hour24RotationAngle.radians)) * width / 2.0,
                                             y: center.y + CGFloat(sin(date.hour24RotationAngle.radians)) * width / 2.0)
                     path.addLine(to: edgePoint)
-                    }
+                }
             }
                 .stroke(self.color, lineWidth: self.thickness)
         }
@@ -29,7 +29,6 @@ struct HourLines : View {
     
 }
 
-#if DEBUG
 struct HourLines_Previews : PreviewProvider {
     static var previews: some View {
         ZStack {
@@ -42,4 +41,3 @@ struct HourLines_Previews : PreviewProvider {
         }
     }
 }
-#endif

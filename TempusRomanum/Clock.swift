@@ -18,7 +18,6 @@ struct Clock : View {
     
 }
 
-#if DEBUG
 struct Clock_Previews : PreviewProvider {
     
     static var previews: some View {
@@ -26,5 +25,5 @@ struct Clock_Previews : PreviewProvider {
             .environmentObject(ClockSettings())
             .environmentObject(Tempus.debugInstance)
     }
+
 }
-#endif

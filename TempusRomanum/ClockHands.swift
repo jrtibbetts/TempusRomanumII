@@ -63,7 +63,6 @@ struct ClockHands : View {
 
 }
 
-#if DEBUG
 struct ClockHands_Previews : PreviewProvider {
     
     static var previews: some View {
@@ -77,4 +76,3 @@ struct ClockHands_Previews : PreviewProvider {
         }
     }
 }
-#endif

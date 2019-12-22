@@ -63,11 +63,9 @@ struct ClockBorder : View {
     
 }
 
-#if DEBUG
 struct ClockBorder_Previews : PreviewProvider {
     static var previews: some View {
         ClockBorder()
             .environmentObject(ClockSettings())
     }
 }
-#endif
