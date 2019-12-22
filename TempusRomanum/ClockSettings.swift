@@ -7,45 +7,25 @@ final public class ClockSettings: ObservableObject {
 
     // MARK: - Bound Properties
     
-    public var borderColor = Color.black {
-        didSet { didChange.send(self) }
-    }
+    @Published public var borderColor = Color.black
     
-    public var borderWidth = CGFloat(3) {
-        didSet { didChange.send(self) }
-    }
+    @Published public var borderWidth = CGFloat(3)
     
-    public var daylightColor = Color("Daylight") {
-        didSet { didChange.send(self) }
-    }
+    @Published public var daylightColor = Color("Daylight")
     
-    public var hourHandColor = Color.red {
-        didSet { didChange.send(self) }
-    }
+    @Published public var hourHandColor = Color.red
     
-    public var hourHandLengthProportion = CGFloat(0.5) {
-        didSet { didChange.send(self) }
-    }
+    @Published public var hourHandLengthProportion = CGFloat(0.5)
     
-    public var minuteHandColor = Color.orange {
-        didSet { didChange.send(self)}
-    }
+    @Published public var minuteHandColor = Color.orange
     
-    public var minuteHandLengthProportion = CGFloat(0.8) {
-        didSet { didChange.send(self) }
-    }
+    @Published public var minuteHandLengthProportion = CGFloat(0.8)
 
-    public var modernMarkLength = CGFloat(10) {
-        didSet { didChange.send(self) }
-    }
+    @Published public var modernMarkLength = CGFloat(10)
     
-    public var nighttimeColor = Color("Nighttime") {
-        didSet { didChange.send(self) }
-    }
-    
-    public var showModernMarks = true {
-        didSet { didChange.send(self) }
-    }
+    @Published public var nighttimeColor = Color("Nighttime")
+
+    @Published public var showModernMarks = true
 
     // MARK: - ObservableObject Properties
     
