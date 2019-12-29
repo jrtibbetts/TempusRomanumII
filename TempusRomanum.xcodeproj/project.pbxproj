@@ -26,14 +26,13 @@
 		96B9A4FD22AC6A0F00D4B73F /* ClockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4FC22AC6A0F00D4B73F /* ClockSettings.swift */; };
 		96B9A50022ACB31400D4B73F /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 96B9A4FF22ACB31400D4B73F /* PromiseKit */; };
 		96B9A50322ACB8D900D4B73F /* PMKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 96B9A50222ACB8D900D4B73F /* PMKFoundation */; };
-		96B9A50722AD5BDC00D4B73F /* Codable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50622AD5BDC00D4B73F /* Codable+Utils.swift */; };
 		96B9A51322AD5D8B00D4B73F /* MockSunriseSunsetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50C22AD5D8A00D4B73F /* MockSunriseSunsetProvider.swift */; };
 		96B9A51422AD5D8B00D4B73F /* CLLocationCoordinate2D+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50D22AD5D8A00D4B73F /* CLLocationCoordinate2D+Formatting.swift */; };
 		96B9A51522AD5D8B00D4B73F /* RomanTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50E22AD5D8A00D4B73F /* RomanTime.swift */; };
 		96B9A51622AD5D8B00D4B73F /* SunriseSunsetDotOrgTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50F22AD5D8A00D4B73F /* SunriseSunsetDotOrgTimes.swift */; };
 		96B9A51722AD5D8B00D4B73F /* SunriseSunsetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A51022AD5D8A00D4B73F /* SunriseSunsetProvider.swift */; };
 		96B9A51822AD5D8B00D4B73F /* SunriseSunset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A51122AD5D8B00D4B73F /* SunriseSunset.swift */; };
-		96B9A51B22AD5EEC00D4B73F /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A51A22AD5EEC00D4B73F /* CustomOperators.swift */; };
+		96DC2C9F23B824FC004CEA1A /* Stylobate in Frameworks */ = {isa = PBXBuildFile; productRef = 96DC2C9E23B824FC004CEA1A /* Stylobate */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,14 +54,12 @@
 		96B9A4F622ABD8C000D4B73F /* ClockBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockBorder.swift; sourceTree = "<group>"; };
 		96B9A4FA22AC692D00D4B73F /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		96B9A4FC22AC6A0F00D4B73F /* ClockSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockSettings.swift; sourceTree = "<group>"; };
-		96B9A50622AD5BDC00D4B73F /* Codable+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Utils.swift"; sourceTree = "<group>"; };
 		96B9A50C22AD5D8A00D4B73F /* MockSunriseSunsetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSunriseSunsetProvider.swift; sourceTree = "<group>"; };
 		96B9A50D22AD5D8A00D4B73F /* CLLocationCoordinate2D+Formatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Formatting.swift"; sourceTree = "<group>"; };
 		96B9A50E22AD5D8A00D4B73F /* RomanTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RomanTime.swift; sourceTree = "<group>"; };
 		96B9A50F22AD5D8A00D4B73F /* SunriseSunsetDotOrgTimes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunriseSunsetDotOrgTimes.swift; sourceTree = "<group>"; };
 		96B9A51022AD5D8A00D4B73F /* SunriseSunsetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunriseSunsetProvider.swift; sourceTree = "<group>"; };
 		96B9A51122AD5D8B00D4B73F /* SunriseSunset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunriseSunset.swift; sourceTree = "<group>"; };
-		96B9A51A22AD5EEC00D4B73F /* CustomOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96DC2C9F23B824FC004CEA1A /* Stylobate in Frameworks */,
 				96B9A50322ACB8D900D4B73F /* PMKFoundation in Frameworks */,
 				96A067EB23AEE84F0082CF51 /* PMKCoreLocation in Frameworks */,
 				96B9A50022ACB31400D4B73F /* PromiseKit in Frameworks */,
@@ -114,7 +112,6 @@
 				96A09A4422AA0F3D00FE6BC6 /* Assets.xcassets */,
 				96A09A4922AA0F3D00FE6BC6 /* LaunchScreen.storyboard */,
 				96A09A4622AA0F3D00FE6BC6 /* Preview Content */,
-				96B9A51922AD5EC700D4B73F /* Stylobate */,
 				96B9A50A22AD5D5100D4B73F /* SunriseSunset */,
 			);
 			path = TempusRomanum;
@@ -142,15 +139,6 @@
 			path = SunriseSunset;
 			sourceTree = "<group>";
 		};
-		96B9A51922AD5EC700D4B73F /* Stylobate */ = {
-			isa = PBXGroup;
-			children = (
-				96B9A50622AD5BDC00D4B73F /* Codable+Utils.swift */,
-				96B9A51A22AD5EEC00D4B73F /* CustomOperators.swift */,
-			);
-			path = Stylobate;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,6 +159,7 @@
 				96B9A4FF22ACB31400D4B73F /* PromiseKit */,
 				96B9A50222ACB8D900D4B73F /* PMKFoundation */,
 				96A067EA23AEE84F0082CF51 /* PMKCoreLocation */,
+				96DC2C9E23B824FC004CEA1A /* Stylobate */,
 			);
 			productName = TempusRomanum;
 			productReference = 96A09A3B22AA0F3A00FE6BC6 /* TempusRomanum.app */;
@@ -204,6 +193,7 @@
 				96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */,
 				96B9A50122ACB8D900D4B73F /* XCRemoteSwiftPackageReference "Foundation" */,
 				96A067E923AEE84F0082CF51 /* XCRemoteSwiftPackageReference "CoreLocation" */,
+				96DC2C9D23B824FC004CEA1A /* XCRemoteSwiftPackageReference "Stylobate" */,
 			);
 			productRefGroup = 96A09A3C22AA0F3A00FE6BC6 /* Products */;
 			projectDirPath = "";
@@ -235,8 +225,6 @@
 				968A67AF22B1EBD400657E93 /* SettingsView.swift in Sources */,
 				96B9A51722AD5D8B00D4B73F /* SunriseSunsetProvider.swift in Sources */,
 				9651975422AF3869003C25B0 /* ClockHands.swift in Sources */,
-				96B9A50722AD5BDC00D4B73F /* Codable+Utils.swift in Sources */,
-				96B9A51B22AD5EEC00D4B73F /* CustomOperators.swift in Sources */,
 				96A09A3F22AA0F3A00FE6BC6 /* AppDelegate.swift in Sources */,
 				96B9A51822AD5D8B00D4B73F /* SunriseSunset.swift in Sources */,
 				96B9A4F522AB736000D4B73F /* ClockFace.swift in Sources */,
@@ -474,6 +462,14 @@
 				minimumVersion = 3.3.2;
 			};
 		};
+		96DC2C9D23B824FC004CEA1A /* XCRemoteSwiftPackageReference "Stylobate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrtibbetts/Stylobate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.27.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -491,6 +487,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 96B9A50122ACB8D900D4B73F /* XCRemoteSwiftPackageReference "Foundation" */;
 			productName = PMKFoundation;
+		};
+		96DC2C9E23B824FC004CEA1A /* Stylobate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96DC2C9D23B824FC004CEA1A /* XCRemoteSwiftPackageReference "Stylobate" */;
+			productName = Stylobate;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
