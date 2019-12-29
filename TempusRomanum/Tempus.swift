@@ -22,9 +22,9 @@ final public class Tempus: ObservableObject {
     
     // MARK: - Public Properties
 
-    /// The modern representation of the current time, in either
-    /// short (`3:24 PM`) or military (`1524`) style, depending on
-    /// the value of `useMiltaryTime`,
+    /// The modern representation of the current time, in either short
+    /// (`3:24 PM`) or military (`1524`) style, depending on the value of
+    /// `useMilitaryTime`.
     public var modernTimeString: String {
         if useMilitaryTime {
             return militaryDateFormatter.string(from: Date())
