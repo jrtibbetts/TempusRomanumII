@@ -14,6 +14,7 @@ struct Clock : View {
             HourLines(color: .blue, dates: tempus.sunriseSunset?.daylightHours, thickness: 2.0)
             ClockHands()
         }
+        .padding(Edge.Set([.leading, .top, .trailing]), 20.0)
     }
     
 }
