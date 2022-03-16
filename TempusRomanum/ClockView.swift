@@ -14,27 +14,27 @@ struct ClockView : View {
                 // Switches between 12- and 24-hour style.
                 Button(action: { self.tempus.useMilitaryTime.toggle() },
                        label: {
-                        Text(self.tempus.modernTimeString)
-                            .frame(minWidth: 100)
-                            .font(.headline)
+                    Text(self.tempus.modernTimeString)
+                        .frame(minWidth: 100)
+                        .font(.headline)
                 }
-                    )
+                )
                     .padding(.top, 30)
-
+                
                 if self.tempus.romanTimeString != nil {
                     Text(self.tempus.romanTimeString!)
                         .font(.subheadline)
                         .italic()
                         .padding(.top, 10)
                 }
-
+                
                 Spacer()
             }
-                .navigationBarTitle(
-                    Text("TEMPUS ROMANUM")
-                )
-
-                .padding(10)
+            .navigationBarTitle(
+                Text("TEMPUS ROMANUM")
+            )
+            
+            .padding(10)
         }
 //            .navigationBarItems(trailing: /* Text("Kreplach") */
 //                PresentationButton(

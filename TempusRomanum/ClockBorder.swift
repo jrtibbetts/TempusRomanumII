@@ -33,7 +33,7 @@ struct ClockBorder : View {
                                 path.addLine(to: lineEndPoint)
                             }
                         }
-                            .stroke(self.settings.borderColor, lineWidth: self.settings.borderWidth)
+                        .stroke(self.settings.borderColor, lineWidth: self.settings.borderWidth)
                     }
                 }
             }

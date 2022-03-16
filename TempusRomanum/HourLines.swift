@@ -23,7 +23,7 @@ struct HourLines : View {
                     path.addLine(to: edgePoint)
                 }
             }
-                .stroke(self.color, lineWidth: self.thickness)
+            .stroke(self.color, lineWidth: self.thickness)
         }
     }
     

@@ -45,18 +45,17 @@ struct ClockHands : View {
         GeometryReader { geometry in
             VStack {
                 ZStack {
-                    ClockHand(angle: self.tempus.time.hour24RotationAngle,
-                              color: self.settings.hourHandColor,
+                    ClockHand(angle: tempus.time.hour24RotationAngle,
+                              color: settings.hourHandColor,
                               lineWidth: 5.0,
-                              multiplier: self.settings.hourHandLengthProportion)
-                        .environmentObject(self.tempus)
-                   
-                    ClockHand(angle: self.tempus.time.minutesAngle,
-                              color: self.settings.minuteHandColor,
+                              multiplier: settings.hourHandLengthProportion)
+                    
+                    ClockHand(angle: tempus.time.minutesAngle,
+                              color: settings.minuteHandColor,
                               lineWidth: 3.0,
-                              multiplier: self.settings.minuteHandLengthProportion)
-                        .environmentObject(self.tempus)
+                              multiplier: settings.minuteHandLengthProportion)
                 }
+                .environmentObject(tempus)
             }
         }
     }
@@ -68,11 +67,10 @@ struct ClockHands_Previews : PreviewProvider {
     static var previews: some View {
         ZStack {
             ClockBorder()
-                .environmentObject(ClockSettings())
-            
+
             ClockHands()
-                .environmentObject(ClockSettings())
                 .environmentObject(Tempus.debugInstance)
         }
+        .environmentObject(ClockSettings())
     }
 }
