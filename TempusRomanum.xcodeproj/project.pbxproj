@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,6 @@
 		9651975622B00880003C25B0 /* Date+Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975522B00880003C25B0 /* Date+Trigonometry.swift */; };
 		9651975822B1CD39003C25B0 /* HourLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9651975722B1CD39003C25B0 /* HourLines.swift */; };
 		968A67AF22B1EBD400657E93 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968A67AE22B1EBD400657E93 /* SettingsView.swift */; };
-		96A067EB23AEE84F0082CF51 /* PMKCoreLocation in Frameworks */ = {isa = PBXBuildFile; productRef = 96A067EA23AEE84F0082CF51 /* PMKCoreLocation */; };
 		96A09A3F22AA0F3A00FE6BC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A3E22AA0F3A00FE6BC6 /* AppDelegate.swift */; };
 		96A09A4122AA0F3A00FE6BC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A09A4022AA0F3A00FE6BC6 /* SceneDelegate.swift */; };
 		96A09A4522AA0F3D00FE6BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A09A4422AA0F3D00FE6BC6 /* Assets.xcassets */; };
@@ -24,15 +23,12 @@
 		96B9A4F722ABD8C000D4B73F /* ClockBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4F622ABD8C000D4B73F /* ClockBorder.swift */; };
 		96B9A4FB22AC692D00D4B73F /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4FA22AC692D00D4B73F /* Clock.swift */; };
 		96B9A4FD22AC6A0F00D4B73F /* ClockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4FC22AC6A0F00D4B73F /* ClockSettings.swift */; };
-		96B9A50022ACB31400D4B73F /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 96B9A4FF22ACB31400D4B73F /* PromiseKit */; };
-		96B9A50322ACB8D900D4B73F /* PMKFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 96B9A50222ACB8D900D4B73F /* PMKFoundation */; };
 		96B9A51322AD5D8B00D4B73F /* MockSunriseSunsetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50C22AD5D8A00D4B73F /* MockSunriseSunsetProvider.swift */; };
 		96B9A51422AD5D8B00D4B73F /* CLLocationCoordinate2D+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50D22AD5D8A00D4B73F /* CLLocationCoordinate2D+Formatting.swift */; };
 		96B9A51522AD5D8B00D4B73F /* RomanTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50E22AD5D8A00D4B73F /* RomanTime.swift */; };
 		96B9A51622AD5D8B00D4B73F /* SunriseSunsetDotOrgTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50F22AD5D8A00D4B73F /* SunriseSunsetDotOrgTimes.swift */; };
 		96B9A51722AD5D8B00D4B73F /* SunriseSunsetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A51022AD5D8A00D4B73F /* SunriseSunsetProvider.swift */; };
 		96B9A51822AD5D8B00D4B73F /* SunriseSunset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A51122AD5D8B00D4B73F /* SunriseSunset.swift */; };
-		96DC2C9F23B824FC004CEA1A /* Stylobate in Frameworks */ = {isa = PBXBuildFile; productRef = 96DC2C9E23B824FC004CEA1A /* Stylobate */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,10 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96DC2C9F23B824FC004CEA1A /* Stylobate in Frameworks */,
-				96B9A50322ACB8D900D4B73F /* PMKFoundation in Frameworks */,
-				96A067EB23AEE84F0082CF51 /* PMKCoreLocation in Frameworks */,
-				96B9A50022ACB31400D4B73F /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,10 +148,6 @@
 			);
 			name = TempusRomanum;
 			packageProductDependencies = (
-				96B9A4FF22ACB31400D4B73F /* PromiseKit */,
-				96B9A50222ACB8D900D4B73F /* PMKFoundation */,
-				96A067EA23AEE84F0082CF51 /* PMKCoreLocation */,
-				96DC2C9E23B824FC004CEA1A /* Stylobate */,
 			);
 			productName = TempusRomanum;
 			productReference = 96A09A3B22AA0F3A00FE6BC6 /* TempusRomanum.app */;
@@ -172,7 +160,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Poikile Creations";
 				TargetAttributes = {
 					96A09A3A22AA0F3A00FE6BC6 = {
@@ -190,10 +178,6 @@
 			);
 			mainGroup = 96A09A3222AA0F3A00FE6BC6;
 			packageReferences = (
-				96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */,
-				96B9A50122ACB8D900D4B73F /* XCRemoteSwiftPackageReference "Foundation" */,
-				96A067E923AEE84F0082CF51 /* XCRemoteSwiftPackageReference "CoreLocation" */,
-				96DC2C9D23B824FC004CEA1A /* XCRemoteSwiftPackageReference "Stylobate" */,
 			);
 			productRefGroup = 96A09A3C22AA0F3A00FE6BC6 /* Products */;
 			projectDirPath = "";
@@ -284,6 +268,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -345,6 +330,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -383,6 +369,7 @@
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TempusRomanum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +390,7 @@
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TempusRomanum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,64 +424,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		96A067E923AEE84F0082CF51 /* XCRemoteSwiftPackageReference "CoreLocation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/PromiseKit/CoreLocation";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.0;
-			};
-		};
-		96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mxcl/PromiseKit/";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.8.4;
-			};
-		};
-		96B9A50122ACB8D900D4B73F /* XCRemoteSwiftPackageReference "Foundation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/PromiseKit/Foundation";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.3.2;
-			};
-		};
-		96DC2C9D23B824FC004CEA1A /* XCRemoteSwiftPackageReference "Stylobate" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jrtibbetts/Stylobate";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.27.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		96A067EA23AEE84F0082CF51 /* PMKCoreLocation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96A067E923AEE84F0082CF51 /* XCRemoteSwiftPackageReference "CoreLocation" */;
-			productName = PMKCoreLocation;
-		};
-		96B9A4FF22ACB31400D4B73F /* PromiseKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96B9A4FE22ACB31400D4B73F /* XCRemoteSwiftPackageReference "PromiseKit" */;
-			productName = PromiseKit;
-		};
-		96B9A50222ACB8D900D4B73F /* PMKFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96B9A50122ACB8D900D4B73F /* XCRemoteSwiftPackageReference "Foundation" */;
-			productName = PMKFoundation;
-		};
-		96DC2C9E23B824FC004CEA1A /* Stylobate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 96DC2C9D23B824FC004CEA1A /* XCRemoteSwiftPackageReference "Stylobate" */;
-			productName = Stylobate;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 96A09A3322AA0F3A00FE6BC6 /* Project object */;
 }
