@@ -69,7 +69,7 @@ struct ClockHands_Previews : PreviewProvider {
             ClockBorder()
 
             ClockHands()
-                .environmentObject(Tempus.debugInstance)
+                .environmentObject(Tempus())
         }
         .environmentObject(ClockSettings())
     }

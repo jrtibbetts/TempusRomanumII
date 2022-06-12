@@ -2,6 +2,7 @@
 
 import Combine
 import SwiftUI
+import WeatherKit
 
 /// Tracks the current time and formats it in the Roman style (e.g. *quinta hora noctis*)
 /// or modern 12- or 24-hour style.
@@ -11,7 +12,7 @@ final public class Tempus: ObservableObject {
     
     /// The current date's sunrise and sunset times. If this is non-`nil`, then the Roman
     /// time can be obtained from `romanTimeString`.
-    @Published public var sunriseSunset: SunriseSunset? = nil
+    @Published public var sunEvents: SunEvents?
 
     /// The clock time. Changes are propagated to subscribers.
     @Published public var time = Date()
@@ -34,7 +35,7 @@ final public class Tempus: ObservableObject {
     }
     
     public var romanTimeString: String? {
-        return sunriseSunset?.romanHour()?.string
+        return sunEvents?.romanHour()?.string
     }
     
     public var updateInterval: TimeInterval? = 60.0 {
@@ -46,14 +47,8 @@ final public class Tempus: ObservableObject {
                     self.time = Date()
                 }
             }
-            
-            didChange.send(self)
         }
     }
-    
-    // MARK: - ObservableObject
-    
-    public let didChange = PassthroughSubject<Tempus, Never>()
 
     // MARK: - Private Properties
     
@@ -71,18 +66,6 @@ final public class Tempus: ObservableObject {
         formatter.dateFormat = "HHmm"
         
         return formatter
-    }()
-    
-    // MARK: - Debugging
-    
-    public static var debugInstance: Tempus = {
-        let sunriseComponents = DateComponents(calendar: .current, timeZone: .current, year: 2019, month: 6, day: 12, hour: 5, minute: 44, second: 0)
-        let sunsetComponents = DateComponents(calendar: .current, timeZone: .current, year: 2019, month: 6, day: 12, hour: 20, minute: 35, second: 0)
-        let sunriseSunset = SimpleSunriseSunset(sunrise: sunriseComponents.date!, sunset: sunsetComponents.date!)
-        let tempus = Tempus()
-        tempus.sunriseSunset = sunriseSunset
-        
-        return tempus
     }()
 
 }

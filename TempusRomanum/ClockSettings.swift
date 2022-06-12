@@ -27,8 +27,4 @@ final public class ClockSettings: ObservableObject {
 
     @Published public var showModernMarks = true
 
-    // MARK: - ObservableObject Properties
-    
-    public let didChange = PassthroughSubject<ClockSettings, Never>()
-
 }

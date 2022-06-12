@@ -28,6 +28,6 @@ struct ClockFace_Previews : PreviewProvider {
     static var previews: some View {
         return ClockFace()
             .environmentObject(ClockSettings())
-            .environmentObject(Tempus.debugInstance)
+            .environmentObject(Tempus())
     }
 }

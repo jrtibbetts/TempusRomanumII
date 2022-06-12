@@ -1,53 +1,18 @@
 //  Copyright © 2018 Poikile Creations. All rights reserved.
 
 import Foundation
-
-public protocol SunriseSunset {
-
-    /// Sunrise. It's assumed that it's for the same day as the `sunset`; if
-    /// not, then that's a problem that this struct doesn't address.
-    var sunrise: Date { get }
-
-    /// Sunset. It's assumed that it's for the same day as the `sunrise`; if
-    /// not, then that's a problem that this struct doesn't address.
-    var sunset: Date { get }
-
-}
-
-public protocol SolarAndLunarTimes: SunriseSunset {
-
-    /// The last instance when the sky shows no sunlight whatsoever. The sun
-    /// sun is 18° below the horizon.
-    var astronomicalDawn: Date { get }
-
-    /// The first instance when the sky shows no sunlight whatsoever. The sun
-    /// sun is 18° below the horizon.
-    var astronomicalDusk: Date { get }
-
-    /// The first instance when the rising sun hits 6° below the horizon.
-    var civilDawn: Date { get }
-
-    /// The first instance when the setting sun hits 6° below the horizon.
-    var civilDusk: Date { get }
-
-    /// The first instance when the rising sun hits 12° below the horizon.
-    var nauticalDawn: Date { get }
-
-    /// The first instance when the setting sun hits 12° below the horizon.
-    var nauticalDusk: Date { get }
-
-}
+import WeatherKit
 
 /// Encapsulates `Date`s for a day's sunrise and sunset, and has numerous
 /// handy properties for calculating things like number of minutes of
 /// nighttime.
-public extension SunriseSunset {
+public extension SunEvents {
 
     // MARK: - Computed Properties
 
     /// The duration, in seconds, of daylight.
     private var secondsOfDaylight: TimeInterval {
-        return sunset.timeIntervalSince(sunrise)
+        return sunset!.timeIntervalSince(sunrise!)
     }
 
     /// The number of minutes in each daylight hour.
@@ -57,7 +22,7 @@ public extension SunriseSunset {
 
     /// An array of `Date`s of the daylight hours.
     var daylightHours: [Date] {
-        return (0..<12).map { sunrise.addingTimeInterval(daylightHourDurationInSeconds * Double($0)) }
+        return (0..<12).map { sunrise!.addingTimeInterval(daylightHourDurationInSeconds * Double($0)) }
     }
 
     /// The duration, in seconds, of nighttime.
@@ -93,8 +58,8 @@ public extension SunriseSunset {
     /// 6 & 7 (starting at index 1, not 0).
     var nighttimeHours: [Date] {
         var amHours = [Date]()
-        var targetHour = sunrise
-        let midnight = Calendar.current.startOfDay(for: sunrise)
+        var targetHour = sunrise!
+        let midnight = Calendar.current.startOfDay(for: targetHour)
 
         while targetHour > midnight {
             let hour = targetHour.addingTimeInterval(-nighttimeHourDurationInSeconds)
@@ -105,7 +70,7 @@ public extension SunriseSunset {
         amHours = amHours.sorted()
 
         let pmHours = (0..<(12 - amHours.count)).map {
-            sunset.addingTimeInterval(nighttimeHourDurationInSeconds * Double($0))
+            sunset!.addingTimeInterval(nighttimeHourDurationInSeconds * Double($0))
         }
 
         return pmHours + amHours

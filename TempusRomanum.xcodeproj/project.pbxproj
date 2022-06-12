@@ -23,11 +23,8 @@
 		96B9A4F722ABD8C000D4B73F /* ClockBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4F622ABD8C000D4B73F /* ClockBorder.swift */; };
 		96B9A4FB22AC692D00D4B73F /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4FA22AC692D00D4B73F /* Clock.swift */; };
 		96B9A4FD22AC6A0F00D4B73F /* ClockSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A4FC22AC6A0F00D4B73F /* ClockSettings.swift */; };
-		96B9A51322AD5D8B00D4B73F /* MockSunriseSunsetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50C22AD5D8A00D4B73F /* MockSunriseSunsetProvider.swift */; };
 		96B9A51422AD5D8B00D4B73F /* CLLocationCoordinate2D+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50D22AD5D8A00D4B73F /* CLLocationCoordinate2D+Formatting.swift */; };
 		96B9A51522AD5D8B00D4B73F /* RomanTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50E22AD5D8A00D4B73F /* RomanTime.swift */; };
-		96B9A51622AD5D8B00D4B73F /* SunriseSunsetDotOrgTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A50F22AD5D8A00D4B73F /* SunriseSunsetDotOrgTimes.swift */; };
-		96B9A51722AD5D8B00D4B73F /* SunriseSunsetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A51022AD5D8A00D4B73F /* SunriseSunsetProvider.swift */; };
 		96B9A51822AD5D8B00D4B73F /* SunriseSunset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B9A51122AD5D8B00D4B73F /* SunriseSunset.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,11 +47,8 @@
 		96B9A4F622ABD8C000D4B73F /* ClockBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockBorder.swift; sourceTree = "<group>"; };
 		96B9A4FA22AC692D00D4B73F /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		96B9A4FC22AC6A0F00D4B73F /* ClockSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockSettings.swift; sourceTree = "<group>"; };
-		96B9A50C22AD5D8A00D4B73F /* MockSunriseSunsetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSunriseSunsetProvider.swift; sourceTree = "<group>"; };
 		96B9A50D22AD5D8A00D4B73F /* CLLocationCoordinate2D+Formatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Formatting.swift"; sourceTree = "<group>"; };
 		96B9A50E22AD5D8A00D4B73F /* RomanTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RomanTime.swift; sourceTree = "<group>"; };
-		96B9A50F22AD5D8A00D4B73F /* SunriseSunsetDotOrgTimes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunriseSunsetDotOrgTimes.swift; sourceTree = "<group>"; };
-		96B9A51022AD5D8A00D4B73F /* SunriseSunsetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunriseSunsetProvider.swift; sourceTree = "<group>"; };
 		96B9A51122AD5D8B00D4B73F /* SunriseSunset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunriseSunset.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,11 +116,8 @@
 			children = (
 				96B9A50D22AD5D8A00D4B73F /* CLLocationCoordinate2D+Formatting.swift */,
 				9651975522B00880003C25B0 /* Date+Trigonometry.swift */,
-				96B9A50C22AD5D8A00D4B73F /* MockSunriseSunsetProvider.swift */,
 				96B9A50E22AD5D8A00D4B73F /* RomanTime.swift */,
 				96B9A51122AD5D8B00D4B73F /* SunriseSunset.swift */,
-				96B9A50F22AD5D8A00D4B73F /* SunriseSunsetDotOrgTimes.swift */,
-				96B9A51022AD5D8A00D4B73F /* SunriseSunsetProvider.swift */,
 			);
 			path = SunriseSunset;
 			sourceTree = "<group>";
@@ -207,13 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				968A67AF22B1EBD400657E93 /* SettingsView.swift in Sources */,
-				96B9A51722AD5D8B00D4B73F /* SunriseSunsetProvider.swift in Sources */,
 				9651975422AF3869003C25B0 /* ClockHands.swift in Sources */,
 				96A09A3F22AA0F3A00FE6BC6 /* AppDelegate.swift in Sources */,
 				96B9A51822AD5D8B00D4B73F /* SunriseSunset.swift in Sources */,
 				96B9A4F522AB736000D4B73F /* ClockFace.swift in Sources */,
 				96B9A4FD22AC6A0F00D4B73F /* ClockSettings.swift in Sources */,
-				96B9A51622AD5D8B00D4B73F /* SunriseSunsetDotOrgTimes.swift in Sources */,
 				96B9A4ED22AAFADE00D4B73F /* Tempus.swift in Sources */,
 				96B9A51522AD5D8B00D4B73F /* RomanTime.swift in Sources */,
 				9651975822B1CD39003C25B0 /* HourLines.swift in Sources */,
@@ -224,7 +213,6 @@
 				96B9A4F322AB3F5700D4B73F /* RomanNumeral.swift in Sources */,
 				96A09A4122AA0F3A00FE6BC6 /* SceneDelegate.swift in Sources */,
 				96B9A4FB22AC692D00D4B73F /* Clock.swift in Sources */,
-				96B9A51322AD5D8B00D4B73F /* MockSunriseSunsetProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +357,7 @@
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TempusRomanum/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +378,7 @@
 				DEVELOPMENT_TEAM = 3MY7LL9G36;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TempusRomanum/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -33,10 +33,10 @@ struct HourLines_Previews : PreviewProvider {
     static var previews: some View {
         ZStack {
             HourLines(color: .green,
-                      dates: Tempus.debugInstance.sunriseSunset?.daylightHours,
+                      dates: Tempus().sunEvents?.daylightHours,
                       thickness: 2.0)
             HourLines(color: .red,
-                      dates: Tempus.debugInstance.sunriseSunset?.nighttimeHours,
+                      dates: Tempus().sunEvents?.nighttimeHours,
                       thickness: 2.0)
         }
     }

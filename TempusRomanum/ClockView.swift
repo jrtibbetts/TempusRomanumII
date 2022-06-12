@@ -50,6 +50,6 @@ struct ClockView_Previews : PreviewProvider {
     static var previews: some View {
         return ClockView()
             .environmentObject(ClockSettings())
-            .environmentObject(Tempus.debugInstance)
+            .environmentObject(Tempus())
     }
 }
